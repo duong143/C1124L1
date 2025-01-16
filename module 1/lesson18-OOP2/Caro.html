@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cờ caro</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns:
+            repeat(20, 30px);
+            gap: 1px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px; border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .cell.taken {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cờ Ca-ro</h1>
+    <div id="board"></div>
+    <p id="message"></p>
+    <script>
+        const size = 20, board = Array.from({ length: size }, () => Array(size).fill(""));
+        let currentPlayer = "X", gameOver = false;
+
+        const boardEl = document.getElementById("board");
+        for (let i = 0; i < size; i++) {
+            for (let j = 0; j < size; j++) {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.dataset.row = i;
+                cell.dataset.col = j;
+                boardEl.appendChild(cell);
+            }
+        }
+
+        const checkWin = (row, col) => {
+            const directions = [[1, 0], [0, 1], [1, 1], [1, -1]];
+            for (const [dx, dy] of directions) {
+                let count = 1;
+                for (let step = 1; step < 5; step++) {
+                    const r = row + dx * step, c = col + dy * step;
+                    if (r >= 0 && r < size && c >= 0 && c < size && board[r][c] === currentPlayer) count++;
+                    else break;
+                }
+                for (let step = 1; step < 5; step++) {
+                    const r = row - dx * step, c = col - dy * step;
+                    if (r >= 0 && r < size && c >= 0 && c < size && board[r][c] === currentPlayer) count++;
+                    else break;
+                }
+                if (count >= 5) return true;
+            }
+            return false;
+        };
+
+        boardEl.addEventListener("click", (e) => {
+            if (gameOver || !e.target.classList.contains("cell")) return;
+            const row = +e.target.dataset.row, col = +e.target.dataset.col;
+            if (board[row][col]) return;
+
+            board[row][col] = currentPlayer;
+            e.target.textContent = currentPlayer;
+            e.target.classList.add("taken");
+
+            if (checkWin(row, col)) {
+                document.getElementById("message").textContent = `Người chơi ${currentPlayer} thắng cuộc!`;
+                gameOver = true;
+            } else {
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
+            }
+        });
+    </script>
+</body>
+</html>

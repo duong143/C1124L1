@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu điều kiện</title>
+</head>
+<body>
+<!--<h1> conditions</h1>-->
+<!--<ol>-->
+<!--    <li>if </li>-->
+<!--    <li>switch-case</li>-->
+<!--</ol>-->
+
+<script>
+    // const radius = + prompt("nhập radius");
+    // if (radius >= 0) {
+    //     const area = Math.PI * radius * radius;
+    //     document.write("area = " + area + "<br>");
+    // }
+// ------------------------------------------------- code khác
+//     const number = +prompt("nhập number");
+//     if (number >=85) {
+//         alert("loại A")
+//     }
+//     else if (number >=75) {
+//         alert("loại B")
+//         }
+//     else if ( number >=55) {
+//        alert("loại C")
+//     }
+//     else if (number >=45) {
+//         alert(" loại D")
+//     }
+//     else if (number < 45 ) {
+//         alert(" loại E")
+//
+//     }
+//------------------------------------------------------------
+
+    // const a= +prompt("nhập số 1");
+    // const  b = +prompt(" nhập số 2")
+    // const c = +prompt(" nhập số 3");
+    // if (a > b) {
+    //     if (b > c) {
+    //         alert(a + " lớn nhất");
+    //     } else {
+    //         alert(b + "lớn nhất")
+    //     }
+    // } else {
+    //     if (c > b) {
+    //         alert( c + "lớn nhất" )
+    //     }
+    // }
+    //----------------------------------------------------------------
+
+
+    // let opera = "+";
+    //
+    // let a = 10;
+    // let b = 20;
+    // switch (opera) {
+    //     case "+":
+    //         alert("a + b = " + (a + b));
+    //         break;
+    //         case "-":
+    //            alert("a - b = " + (a - b));
+    //             break;
+    //             case "*":
+    //                 alert("a * b = " + (a * b));
+    //                 break;
+    //                 case "/":
+    //                     alert("a / b = " + (a / b));
+    //                     break;
+    //                     default:
+    //                         alert("ko co phep toan");
+    // }
+    //----------------------------------------------------------
+
+    // let a = 100;
+    // let b = 200;
+    // switch (a) {
+    //     case 100:
+    //         alert("a=" +a);
+    //         switch (b){
+    //             case 200 :
+    //                 alert("b="+b);
+    //         }
+    // }
+
+    //------------------------------------------------------------------------------------
+// thực hành switch- case
+//     let browser = prompt("Enter browser name!")
+//     switch (browser) {
+//         case 'Edge':
+//             alert("You've got the Edge!");
+//             break;
+//         case 'Chrome':
+//         case 'Firefox':
+//         case 'Safari':
+//         case 'Opera':
+//             alert('Okay we support these browsers too');
+//             break;
+//         default:
+//             alert('We hope that this page looks ok!');
+//     }
+    //--------------------------------------------------------
+    //thực hành toán tử 3 ngôi
+
+    // let a = prompt("a: ");
+    // let b = prompt("b: ");
+    // result = (a + b < 4) ? 'Below' : 'Over';
+    // document.write(result);
+
+    //---------------------------------------------
+    //thực hành toán tử 3 ngôi kiểu khác
+    let login = prompt(" nhap vao day")
+    let message = (login == 'Employee' || ' employee') ?
+        'hello':
+        (login == 'Boss') ?
+            ' hello sir' :
+            (login == '') ?
+                'no login':
+                '';
+    alert(message);
+
+</script>
+</body>
+</html>

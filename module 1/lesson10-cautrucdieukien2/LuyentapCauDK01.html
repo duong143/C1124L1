@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<!--Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
+<!--    <h1>Kiểm tra chia hết</h1>-->
+
+<!--    <label for="a">Nhập số a:</label>-->
+<!--    <input type="number" id="a" required><br><br>-->
+
+<!--    <label for="b">Nhập số b:</label>-->
+<!--    <input type="number" id="b" required><br><br>-->
+
+<!--    <button onclick="checkDivisibility()">Kiểm tra</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function checkDivisibility() {-->
+<!--            const a = parseInt(document.getElementById("a").value);-->
+<!--            const b = parseInt(document.getElementById("b").value);-->
+
+<!--            if (b === 0) {-->
+<!--                document.getElementById("result").innerText = "Không thể chia cho 0!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            if (a % b === 0) {-->
+<!--                document.getElementById("result").innerText = a + " chia hết cho " + b;-->
+<!--            } else {-->
+<!--                document.getElementById("result").innerText = a + " không chia hết cho " + b;-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--Bài 2: Nhập tuổi và in ra kết quả -->
+<!--nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.-->
+
+<!-- <h1>Kiểm tra điều kiện vào lớp 10</h1>-->
+
+<!--    <label for="age">Nhập tuổi học sinh:</label>-->
+<!--    <input type="number" id="age" required><br><br>-->
+
+<!--    <button onclick="checkEligibility()">Kiểm tra</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function checkEligibility() {-->
+
+<!--            const age = parseInt(document.getElementById("age").value);-->
+
+<!--            if (isNaN(age) || age <= 0) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập tuổi hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            if (age < 15 || age > 30) {-->
+<!--                document.getElementById("result").innerText = "Học sinh không đủ điều kiện vào lớp 10!";-->
+<!--            } else {-->
+<!--                document.getElementById("result").innerText = "Học sinh đủ điều kiện vào lớp 10!";-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình-->
+<!--để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0-->
+<!--  <h1>Kiểm tra số lớn hay nhỏ hơn 0</h1>-->
+
+<!--    <label for="number">Nhập một số nguyên:</label>-->
+<!--    <input type="number" id="number" required><br><br>-->
+
+<!--    <button onclick="checkNumber()">Kiểm tra</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function checkNumber() {-->
+<!--            const number = parseInt(document.getElementById("number").value);-->
+
+<!--            if (isNaN(number)) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập một số nguyên hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            if (number > 0) {-->
+<!--                document.getElementById("result").innerText = "Số " + number + " là lớn hơn 0.";-->
+<!--            } else if (number < 0) {-->
+<!--                document.getElementById("result").innerText = "Số " + number + " là nhỏ hơn 0.";-->
+<!--            } else {-->
+<!--                document.getElementById("result").innerText = "Số " + number + " bằng 0.";-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+
+<!-- <h1>Tìm giá trị lớn nhất của ba số nguyên</h1>-->
+
+<!--    <label for="num1">Nhập số thứ nhất:</label>-->
+<!--    <input type="number" id="num1" required><br><br>-->
+
+<!--    <label for="num2">Nhập số thứ hai:</label>-->
+<!--    <input type="number" id="num2" required><br><br>-->
+
+<!--    <label for="num3">Nhập số thứ ba:</label>-->
+<!--    <input type="number" id="num3" required><br><br>-->
+
+<!--    <button onclick="findMax()">Tìm giá trị lớn nhất</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function findMax() {-->
+<!--            const num1 = parseInt(document.getElementById("num1").value);-->
+<!--            const num2 = parseInt(document.getElementById("num2").value);-->
+<!--            const num3 = parseInt(document.getElementById("num3").value);-->
+
+<!--            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập ba số nguyên hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            const max = Math.max(num1, num2, num3);-->
+<!--            document.getElementById("result").innerText = "Giá trị lớn nhất là: " + max;-->
+<!--        }-->
+<!--    </script>-->
+
+
+
+</body>
+</html>

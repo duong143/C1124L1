@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hahaha</title>
+</head>
+<body>
+<div id="bangcuuchuong"></div>
+<script>
+    // let i =0;
+    //
+    // do  {
+    //     i++;
+    //     if(i===3){
+    //         continue;
+    //     }
+    //     document.write(`${i} break <br>`);
+    //
+    // } while (i<= 10){
+    //     document.write(" chạy xong");
+    // }
+
+
+    // for (let i = 1; i < 5; i++) {
+    //     for (let j = 1; j < 15; j++) {
+    //         document.write(i + " " + j);
+    //     }
+    //     document.write("<br>");
+    // }
+
+// const center = " CG";
+//   for (const centerKey in center){
+//       document.write(center[centerKey] + "<br>");
+//   }
+
+let table = " <table border='1'>";
+for (let i = 1; i <= 10; i++) {
+    table += "<tr>";
+    for (let j = 2; j <= 10; j++) {
+        table += "<td>" + i + "*"+ j + "="+ (i*j) + "</td>";
+
+    }
+    table += "</tr>";
+}
+table += "</table>";
+document.getElementById("bangcuuchuong").innerHTML = table;
+
+
+
+</script>
+</body>
+</html>

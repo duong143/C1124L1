@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+        .bulb {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            background-color: gray;
+        }
+        .bulb.on {
+            background-color: yellow;
+            box-shadow: 0 0 20px yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bóng đèn và công tắc</h1>
+    <div class="bulb" id="bulb"></div>
+    <button id="toggleButton">Bật/Tắt</button>
+
+    <script>
+        class Bulb {
+            constructor() { this.state = false; }
+            toggle() { this.state = !this.state; }
+            getState() { return this.state; }
+        }
+
+        const bulb = new Bulb();
+        const bulbDiv = document.getElementById("bulb");
+        const toggleButton = document.getElementById("toggleButton");
+
+        toggleButton.addEventListener("click", () => {
+            bulb.toggle();
+            bulbDiv.className = "bulb " + (bulb.getState() ? "on" : "");
+        });
+
+        // Tự động bật/tắt 10 lần
+        let count = 0;
+        const interval = setInterval(() => {
+            if (count++ < 10) toggleButton.click();
+            else clearInterval(interval);
+        }, 1000);
+    </script>
+</body>
+</html>

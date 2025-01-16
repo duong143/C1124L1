@@ -1,0 +1,9 @@
+table{
+    width: 100%;
+
+}
+tr,th:first-child,td:first-child{
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}

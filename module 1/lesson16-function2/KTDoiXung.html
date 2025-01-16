@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đối xứng</title>
+</head>
+<body>
+<script>
+    const inputString = prompt("Nhập chuỗi để kiểm tra:");
+function isPalindrome(s) {
+  return s === s.split('').reverse().join('');
+}
+if (isPalindrome(inputString)) {
+  alert("Chuỗi là đối xứng!");
+} else {
+  alert("Chuỗi không phải là đối xứng.");
+}
+</script>
+</body>
+</html>

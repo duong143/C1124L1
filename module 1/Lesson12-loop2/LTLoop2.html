@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+
+<!--Bài 1: In dãy Fibonaci-->
+<!-- <h1>In dãy Fibonacci</h1>-->
+
+<!--    <label for="count">Nhập số lượng số Fibonacci cần in ra:</label>-->
+<!--    <input type="number" id="count" required><br><br>-->
+
+<!--    <button onclick="generateFibonacci()">Hiển thị dãy Fibonacci</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function generateFibonacci() {-->
+<!--            // Lấy giá trị số lượng số Fibonacci cần in-->
+<!--            const count = parseInt(document.getElementById("count").value);-->
+
+<!--            // Kiểm tra nếu người dùng nhập giá trị hợp lệ-->
+<!--            if (isNaN(count) || count <= 0) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập một số nguyên dương hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            // Dãy Fibonacci bắt đầu với 0 và 1-->
+<!--            let fibonacci = [0, 1];-->
+
+<!--            // Tính các số Fibonacci tiếp theo-->
+<!--            for (let i = 2; i < count; i++) {-->
+<!--                fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);-->
+<!--            }-->
+
+<!--            // Hiển thị kết quả-->
+<!--            document.getElementById("result").innerText = "Dãy Fibonacci: " + fibonacci.join(", ");-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--Bài 2: Tính giai thừa của một số nguyên dương-->
+<!--  <h1>Tính Giai Thừa Của Một Số Nguyên Dương</h1>-->
+
+<!--    <label for="number">Nhập số nguyên dương:</label>-->
+<!--    <input type="number" id="number" required><br><br>-->
+
+<!--    <button onclick="calculateFactorial()">Tính Giai Thừa</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function calculateFactorial() {-->
+<!--            // Lấy giá trị số nguyên dương từ người dùng-->
+<!--            const number = parseInt(document.getElementById("number").value);-->
+
+<!--            // Kiểm tra nếu số nhập vào không hợp lệ-->
+<!--            if (isNaN(number) || number <= 0) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập một số nguyên dương hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            // Hàm tính giai thừa-->
+<!--            let factorial = 1;-->
+<!--            for (let i = 1; i <= number; i++) {-->
+<!--                factorial *= i;-->
+<!--            }-->
+
+<!--            // Hiển thị kết quả-->
+<!--            document.getElementById("result").innerText = "Giai thừa của " + number + " là: " + factorial;-->
+<!--        }-->
+<!--    </script>-->
+
+
+
+
+<!--Bài 3: In tam giác vuông.-->
+<!--Các góc vuông nằm ở các vị trí khác nhau-->
+  <h1>In Tam Giác Vuông</h1>
+
+    <label for="size">Nhập kích thước tam giác (số dòng):</label>
+    <input type="number" id="size" required><br><br>
+
+    <button onclick="printTriangle()">In Tam Giác Vuông</button>
+
+    <h2>Tam Giác Vuông 1</h2>
+    <pre id="triangle1"></pre>
+
+    <h2>Tam Giác Vuông 2</h2>
+    <pre id="triangle2"></pre>
+
+    <h2>Tam Giác Vuông 3</h2>
+    <pre id="triangle3"></pre>
+
+    <h2>Tam Giác Vuông 4</h2>
+    <pre id="triangle4"></pre>
+
+    <script>
+        function printTriangle() {
+            const size = parseInt(document.getElementById("size").value);
+            if (isNaN(size) || size <= 0) {
+                alert("Vui lòng nhập một số nguyên dương hợp lệ!");
+                return;
+            }
+
+            let triangle1 = "";
+            let triangle2 = "";
+            let triangle3 = "";
+            let triangle4 = "";
+
+            // Tam giác vuông 1 (góc vuông ở dưới bên trái)
+            for (let i = 1; i <= size; i++) {
+                triangle1 += "*".repeat(i) + "\n";
+            }
+
+            // Tam giác vuông 2 (góc vuông ở dưới bên phải)
+            for (let i = 1; i <= size; i++) {
+                triangle2 += " ".repeat(size - i) + "*".repeat(i) + "\n";
+            }
+
+            // Tam giác vuông 3 (góc vuông ở trên bên trái)
+            for (let i = size; i >= 1; i--) {
+                triangle3 += "*".repeat(i) + "\n";
+            }
+
+            // Tam giác vuông 4 (góc vuông ở trên bên phải)
+            for (let i = size; i >= 1; i--) {
+                triangle4 += " ".repeat(size - i) + "*".repeat(i) + "\n";
+            }
+
+            // Hiển thị các tam giác
+            document.getElementById("triangle1").innerText = triangle1;
+            document.getElementById("triangle2").innerText = triangle2;
+            document.getElementById("triangle3").innerText = triangle3;
+            document.getElementById("triangle4").innerText = triangle4;
+        }
+    </script>
+
+</body>
+</body>
+</html>

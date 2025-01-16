@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả điện thoại</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .status {
+      background-color: #e2e2e2;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .message-box {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .message-box ul {
+      padding-left: 20px;
+    }
+
+    .message-box li {
+      padding: 5px 0;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mobile Phone Example</h1>
+
+    <div class="status" id="nokiaStatus">Nokia - Pin: 100%</div>
+    <div class="status" id="iphoneInboxStatus">iPhone - Hộp thư đến: Chưa nhận tin nhắn</div>
+
+    <div class="message-box">
+      <h3>Nokia Messages Sent</h3>
+      <ul id="nokiaMessages"></ul>
+    </div>
+
+    <button class="btn" id="sendMessageBtn">Gửi tin nhắn từ Nokia tới iPhone</button>
+
+    <div class="message-box">
+      <h3>iPhone Inbox</h3>
+      <ul id="iphoneInbox"></ul>
+    </div>
+  </div>
+
+  <script>
+    class Mobile {
+      constructor(brand) {
+        this.brand = brand;
+        this.isOn = false;
+        this.battery = 100;
+        this.draftMessage = '';
+        this.inbox = [];
+        this.sentMessages = [];
+      }
+
+      isPhoneOn() {
+        return this.isOn;
+      }
+
+      turnOn() {
+        if (this.battery > 0) {
+          this.isOn = true;
+          this.decreaseBattery();
+        }
+      }
+
+      turnOff() {
+        this.isOn = false;
+        this.decreaseBattery();
+      }
+
+      chargeBattery() {
+        this.battery = 100;
+      }
+
+      composeMessage(message) {
+        if (this.isPhoneOn()) {
+          this.draftMessage = message;
+          this.decreaseBattery();
+        }
+      }
+
+      sendMessage(receiver) {
+        if (this.isPhoneOn() && this.draftMessage) {
+          receiver.receiveMessage(this.draftMessage);
+          this.sentMessages.push(this.draftMessage);
+          this.draftMessage = '';
+          this.decreaseBattery();
+        }
+      }
+
+      receiveMessage(message) {
+        if (this.isPhoneOn()) {
+          this.inbox.push(message);
+          this.decreaseBattery();
+        }
+      }
+
+      viewInbox() {
+        return this.inbox;
+      }
+
+      viewSentMessages() {
+        return this.sentMessages;
+      }
+
+      decreaseBattery() {
+        if (this.battery > 0) {
+          this.battery -= 1;
+        }
+      }
+
+      getBatteryStatus() {
+        return this.battery;
+      }
+    }
+
+    const nokia = new Mobile('Nokia');
+    const iphone = new Mobile('iPhone');
+
+    nokia.turnOn();
+    nokia.composeMessage('Chào iPhone, tin nhắn này từ Nokia!');
+    nokia.sendMessage(iphone);
+
+    document.getElementById('sendMessageBtn').addEventListener('click', () => {
+      nokia.turnOn();
+      nokia.composeMessage('Chào iPhone, tin nhắn này từ Nokia!');
+      nokia.sendMessage(iphone);
+
+      updateUI();
+    });
+
+    function updateUI() {
+      document.getElementById('nokiaStatus').textContent = `Nokia - Pin: ${nokia.getBatteryStatus()}%`;
+      document.getElementById('iphoneInboxStatus').textContent = `iPhone - Hộp thư đến: ${iphone.viewInbox().join(', ')}`;
+      document.getElementById('nokiaMessages').innerHTML = nokia.viewSentMessages().map(msg => `<li>${msg}</li>`).join('');
+      document.getElementById('iphoneInbox').innerHTML = iphone.viewInbox().map(msg => `<li>${msg}</li>`).join('');
+    }
+
+    updateUI();
+  </script>
+</body>
+</html>

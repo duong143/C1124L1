@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<!--bài 1 -->
+<!--<script>-->
+<!--    function alertMessage(message) {-->
+<!--        alert(message);-->
+<!--    }-->
+<!--    alertMessage("Hchào boiiiii");-->
+<!--</script>-->
+
+<!--bài 2-->
+<!--<script>-->
+<!--        function increaseByOne(number) {-->
+<!--            return number + 1;-->
+<!--        }-->
+<!--        function showResult() {-->
+<!--            const inputNumber = parseInt(prompt("Nhập một số:", "0"), 10); // Lấy số từ người dùng-->
+<!--            const result = increaseByOne(inputNumber); // Gọi hàm để tăng giá trị-->
+<!--            document.getElementById("result").innerText = `Kết quả: ${result}`; // Hiển thị kết quả-->
+<!--        }-->
+<!--    </script>-->
+<!--<p id="result">Nhấn vào nút bên dưới để thực hiện phép tính.</p>-->
+<!--    <button onclick="showResult()">Tăng giá trị lên 1</button>-->
+
+<!--bài 3-->
+<!--<script>-->
+<!--    var a = prompt("nhâp số a :");-->
+<!--    var b = prompt(" nhập số b :");-->
+<!--    function compareAndSum(a, b) {-->
+<!--    if (a > b) {-->
+<!--        alert("Tham số thứ nhất lớn hơn tham số thứ hai!");-->
+<!--    } else {-->
+<!--        return a + b;-->
+<!--    }-->
+<!--}-->
+<!--const result = compareAndSum(a, b); // Gọi hàm với ví dụ (3, 5)-->
+<!--if (result !== undefined) {-->
+<!--    document.write(`Tổng của hai tham số là: ${result}`);-->
+<!--}-->
+<!--</script>-->
+
+<!--bài 5 -->
+ <h1>Tìm Chòm Sao Theo Tên Ngôi Sao</h1>
+    <button onclick="searchStar()">Tìm Chòm Sao</button>
+    <p id="result">Kết quả sẽ hiển thị tại đây.</p>
+<script>
+    const stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+        // Mảng chứa tên các chòm sao tương ứng
+        const constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        // Hàm tìm chòm sao từ tên ngôi sao
+        function findConstellation(starName) {
+            // Tìm chỉ số của ngôi sao trong mảng `stars`
+            const index = stars.indexOf(starName);
+
+            // Nếu tìm thấy, trả về tên chòm sao tương ứng
+            if (index !== -1) {
+                return constellations[index];
+            }
+            // Nếu không tìm thấy, trả về thông báo
+            return "Không tìm thấy ngôi sao nào với tên bạn nhập.";
+        }
+
+        // Hàm xử lý đầu vào của người dùng
+        function searchStar() {
+            // Yêu cầu người dùng nhập tên ngôi sao
+            const starName = prompt("Nhập tên ngôi sao bạn muốn tìm (vd: Polaris):");
+
+            // Gọi hàm `findConstellation` và nhận kết quả
+            const result = findConstellation(starName);
+
+            // Hiển thị kết quả trên màn hình
+            document.getElementById("result").innerText = result;
+        }
+</script>
+</body>
+</html>

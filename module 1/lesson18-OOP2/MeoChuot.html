@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="simulate()">Mô phỏng quá trình mèo bắt chuột</button>
+    <p id="result"></p>
+
+    <script>
+        // Lớp Rat (Chuột)
+        class Rat {
+            constructor(name, weight, speed) {
+                this.name = name; // Tên
+                this.weight = weight; // Khối lượng
+                this.speed = speed; // Tốc độ
+                this.status = "sống"; // Trạng thái: sống hay chết
+            }
+
+            // Hành vi kêu của chuột
+            squeak() {
+                return `${this.name} kêu: chít, chít`;
+            }
+        }
+
+        // Lớp Cat (Mèo)
+        class Cat {
+            constructor(name, weight, maxSpeed) {
+                this.name = name; // Tên
+                this.weight = weight; // Khối lượng
+                this.maxSpeed = maxSpeed; // Tốc độ di chuyển tối đa
+            }
+
+            // Hành vi kêu của mèo
+            meow() {
+                return `${this.name} kêu: meo meo`;
+            }
+
+            // Hành vi bắt chuột
+            catchRat(rat) {
+                if (this.maxSpeed > rat.speed) {
+                    return `${this.name} đã bắt được ${rat.name}.`;
+                } else {
+                    return `${this.name} không thể bắt được ${rat.name} vì tốc độ của mèo quá thấp.`;
+                }
+            }
+
+            // Hành vi ăn thịt chuột
+            eatRat(rat) {
+                if (rat.status === "sống") {
+                    this.weight += rat.weight; // Mèo tăng cân khi ăn chuột
+                    rat.status = "chết"; // Chuột chết sau khi bị ăn
+                    return `${this.name} đã ăn ${rat.name}. Khối lượng của mèo là ${this.weight}kg.`;
+                } else {
+                    return `${this.name} không thể ăn ${rat.name} vì chuột đã chết.`;
+                }
+            }
+        }
+
+        // Hàm mô phỏng quá trình mèo bắt chuột và ăn chuột
+        function simulate() {
+            // Tạo đối tượng chuột và mèo
+            let rat = new Rat("Chuột 1", 0.5, 10); // Chuột có khối lượng 0.5kg và tốc độ 10m/s
+            let cat = new Cat("Mèo 1", 3.0, 12); // Mèo có khối lượng 3kg và tốc độ 12m/s
+
+            // Kêu
+            let squeakResult = rat.squeak();
+            let meowResult = cat.meow();
+
+            // Mèo bắt chuột
+            let catchResult = cat.catchRat(rat);
+
+            // Mèo ăn chuột nếu bắt được
+            let eatResult = "";
+            if (cat.maxSpeed > rat.speed) {
+                eatResult = cat.eatRat(rat);
+            }
+
+            // Hiển thị kết quả
+            document.getElementById("result").innerHTML = `
+                ${squeakResult} <br>
+                ${meowResult} <br>
+                ${catchResult} <br>
+                ${eatResult}
+            `;
+        }
+    </script>
+</body>
+</html>

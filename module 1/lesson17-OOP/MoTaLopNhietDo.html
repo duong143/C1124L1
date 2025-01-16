@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả lớp nhiệt độ</title>
+</head>
+<body>
+  <p id="celsius"></p>
+  <p id="fahrenheit"></p>
+  <p id="kelvin"></p>
+
+  <script>
+    class Temperature {
+      constructor(celsius) {
+        if (celsius < -273) throw new Error("Nhiệt độ không thể nhỏ hơn -273 độ C");
+        this.celsius = celsius;
+      }
+      toFahrenheit() {
+        return (this.celsius * 9/5) + 32;
+      }
+      toKelvin() {
+        return this.celsius + 273.15;
+      }
+    }
+    let temp = new Temperature(25);
+
+    // Hiển thị kết quả chuyển đổi
+    document.getElementById("celsius").textContent = "Nhiệt độ: " + temp.celsius + " °C";
+    document.getElementById("fahrenheit").textContent = "Độ F: " + temp.toFahrenheit() + " °F";
+    document.getElementById("kelvin").textContent = "Độ Kelvin: " + temp.toKelvin() + " K";
+  </script>
+</body>
+</html>

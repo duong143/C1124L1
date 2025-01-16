@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do u Love me</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #yes-btn, #no-btn {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        #no-btn {
+            background-color: red;
+            color: white;
+        }
+        #yes-btn {
+            background-color: green;
+            color: white;
+        }
+        #message {
+            font-size: 36px;
+            color: pink;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+
+    <button id="yes-btn" onclick="showLoveMessage()">Yes</button>
+    <button id="no-btn" onmouseover="moveNoButton()">No</button>
+
+    <div id="message">&lt;3</div>
+
+    <script>
+        // Hiển thị thông báo "<3" khi click vào nút YES
+        function showLoveMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // Di chuyển nút NO tới vị trí ngẫu nhiên khi di chuột vào nút NO
+        function moveNoButton() {
+            const noButton = document.getElementById("no-btn");
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            // Tạo vị trí ngẫu nhiên cho nút NO
+            const randomX = Math.random() * (screenWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (screenHeight - noButton.offsetHeight);
+
+            // Di chuyển nút NO tới vị trí ngẫu nhiên
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        }
+    </script>
+</body>
+</html>

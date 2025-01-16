@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành</title>
+</head>
+<body>
+
+<!--  // Tạo và gọi hàm-->
+
+<!-- // function processConfirm(answer){-->
+<!-- //   let result = "";-->
+<!-- //   if (answer ){-->
+<!-- //     result = " tuyệt";-->
+<!-- //   }else {-->
+<!-- //     result = " hẹn lần sau nha ku"-->
+<!-- //   }-->
+<!-- //   return result;-->
+<!-- // }-->
+<!-- // let confirmAnswer = confirm("Tao có thể chơi được ko");-->
+<!-- // let theAnswer = processConfirm(confirmAnswer);-->
+<!-- // alert(theAnswer);-->
+
+
+
+<!-- //Chuyển đổi nhiệt độ-->
+<!--<script>-->
+<!--//&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+<!--  function temperatureConvert(valNum){-->
+<!--    valNum = parseFloat(valNum);-->
+<!--    document.getElementById("outputDoC").innerHTML = (valNum-32) / 1.8;-->
+<!--  }-->
+<!--</script>-->
+<!--<p>-->
+<!--  <label>Độ F</label>-->
+<!--  <input type="number" id="DoF" placeholder="Độ F"-->
+<!--  oninput="temperatureConvert(this.value)"-->
+<!--  onchange="temperatureConvert(this.value)">-->
+<!--</p>-->
+<!--<p>Độ C : <span id="outputDoC"></span></p>-->
+
+
+<!--Tìm giá trị nhỏ nhất của mảng-->
+<script>
+  function minArray(arr) {
+    let min = arr[0];
+    for ( var i = 1; i < arr.length; i++) {
+      if (arr[i] < min) {
+        min = arr[i];
+      }
+    }
+    return min;
+  }
+  // let arr1 = [3,5,1,8,-3,7,8];
+  let arr1 = [];
+  let min = minArray(arr1);
+  alert(min)
+</script>
+
+
+
+</body>
+</html>

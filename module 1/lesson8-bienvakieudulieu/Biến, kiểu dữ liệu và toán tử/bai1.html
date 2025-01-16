@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập điểm của một sinh viên</title>
+</head>
+<body>
+<script>
+
+    let inputvl;
+    let inputhh;
+    let inputsh;
+    inputvl = prompt(" enter diem vat ly");
+    inputhh = prompt(" enter diem hoa hoc");
+    inputsh = prompt(" enter diem sinh hoc");
+    let vl = parseInt(inputvl);
+   let  hh = parseInt(inputhh);
+   let sh = parseInt(inputsh);
+   let diemtb = ( vl + hh + sh )/3 ;
+   let tongdiem =  vl + hh + sh  ;
+   document.write("<br>");
+   document.write(diemtb);
+   document.write("<br>");
+   document.write(tongdiem);
+
+</script>
+</body>
+</html>

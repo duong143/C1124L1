@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng hàm có sẵn</title>
+</head>
+<body>
+<!--Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi như sau: myColor = ["Red", "Green", "White", "Black"];-->
+<!--Sau khi thực thi chương trình sẽ trả về dạng như sau : -->
+
+<!--"Red,Green,White,Black"-->
+
+<!--<h1>Nối các phần tử trong mảng chuỗi</h1>-->
+
+<!--    <button onclick="joinArray()">Nối mảng chuỗi</button>-->
+
+<!--    <h2>Đầu ra:</h2>-->
+<!--    <p id="result"></p>-->
+
+<!--    <script>-->
+<!--        function joinArray() {-->
+<!--            const myColor = ["Red", "Green", "White", "Black"];-->
+<!--            const result = myColor.join(",");-->
+<!--            document.getElementById("result").innerText = result;-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu -->
+<!--(-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào -->
+<!--025468 thì kết quả của chương trình sẽ là 0-254-6-8.-->
+
+<!--<h1>Chèn dấu (-) giữa các số chẵn</h1>-->
+
+<!--    <label for="number">Nhập số:</label>-->
+<!--    <input type="text" id="number" required><br><br>-->
+
+<!--    <button onclick="insertDash()">Chèn Dấu (-)</button>-->
+
+<!--    <h2>Kết quả:</h2>-->
+<!--    <p id="result"></p>-->
+
+<!--    <script>-->
+<!--        function insertDash() {-->
+<!--            const inputNumber = document.getElementById("number").value;-->
+
+<!--            if (!/^\d+$/.test(inputNumber)) {-->
+<!--                document.getElementById("result").innerText = "Vui lòng nhập một số hợp lệ!";-->
+<!--                return;-->
+<!--            }-->
+
+<!--            let result = "";-->
+<!--            let previousCharWasEven = false;-->
+
+<!--            for (let i = 0; i < inputNumber.length; i++) {-->
+<!--                let currentDigit = inputNumber[i];-->
+
+<!--                if (currentDigit % 2 === 0) {-->
+<!--                    if (previousCharWasEven) {-->
+<!--                        result += "-";-->
+<!--                    }-->
+<!--                    result += currentDigit;-->
+<!--                    previousCharWasEven = true;-->
+<!--                } else {-->
+<!--                    result += currentDigit;-->
+<!--                    previousCharWasEven = false;-->
+<!--                }-->
+<!--            }-->
+
+<!--            document.getElementById("result").innerText = result;-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 3: Viết một chương trình nhập vào một chuỗi -->
+<!--và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang -->
+<!--thành dạng chữ hoa. Ví dụ: nếu bạn nhập vào -->
+<!--chuỗi 'The Quick Brown Fox' kết quả của chương trình -->
+<!--là 'tHE qUICK bROWN fOX'.-->
+  <h1>Chuyển Chữ Thường Thành Chữ Hoa và Ngược Lại</h1>
+
+    <label for="inputString">Nhập chuỗi:</label>
+    <input type="text" id="inputString" required><br><br>
+
+    <button onclick="convertCase()">Chuyển Đổi</button>
+
+    <h2>Kết quả:</h2>
+    <p id="result"></p>
+
+    <script>
+        function convertCase() {
+            const inputString = document.getElementById("inputString").value;
+            if (inputString === "") {
+                document.getElementById("result").innerText = "Vui lòng nhập một chuỗi!";
+                return;
+            }
+
+            let result = "";
+
+            for (let i = 0; i < inputString.length; i++) {
+                const char = inputString[i];
+                if (char === char.toLowerCase()) {
+                    result += char.toUpperCase();
+                } else {
+                    result += char.toLowerCase();
+                }
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>

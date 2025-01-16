@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funtion</title>
+</head>
+<body>
+square of <input type="text" id="input" oninput="calculate()"> <span id="result"></span>
+<script>
+    // khai báo hàm
+    // whoami là tham số
+    // student gọi là đối số
+    // function sayHello(whoiam) {
+    //  console.log("Hello World!" + whoiam);
+    // }
+    // sayHello();
+    // const num = +prompt("số lượng người muốn thêm : ");
+    // let students = [];
+    //
+    // for (let i = 0; i < num; i++) {
+    //     students[i] = prompt("nhập tên học viên thứ : " )
+    // }
+    // // document.write(students.join("-"));
+    // for (const student of students) {
+    //     sayHello(student);
+    // }
+    //
+    // console.log("huy", "dương", "tri",1,2,3);
+    // const result = sayHello("dương");
+    // console.log(result);
+
+
+
+    // function sum(a, b) {
+    //     if (isNaN(a)){
+    //         return " đối số phải là số nguyên" ;
+    //     }
+    //     return a + b;
+    // }
+    //
+    // console.log(sum(a, 2));
+
+// var x = 10;
+//
+//     function changeValue(x){
+//         x =20;
+//     }
+//     changeValue();
+//     console.log(x);
+//
+//     let a = "mơ";
+//     let b = "mắm";
+//     function swap(a,b) {
+//         let c = a;
+//         b = c ;
+// console.log("trong hàm swap : ",a ,b);
+//     }
+//     swap(a,b);
+//     console.log(a, b);
+
+    function square(num) {
+        var result = num*num;
+        return result;
+    }
+    function calculate() {
+        var input = document.getElementById("input").value;
+        var result = square(input);
+        document.getElementById("result").innerHTML = result;
+    }
+    // var squaref2 = square(2);
+    // document.write("square of 2 is " + squaref2 + "<br>");
+    // var squaref5 = square(5);
+    // document.write("square of 5 is " + squaref5);
+</script>
+</body>
+</html>

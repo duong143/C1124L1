@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh do C</title>
+</head>
+<body>
+<input type="number" placeholder="độ C " id="C">
+<button onclick="change()">chuyển đổi </button>
+<p id="ketqua"></p>
+<script>
+    function change(){
+        let C = document.getElementById('C').value;
+        let F =  (( C/5) *9 ) +32;
+        document.getElementById('ketqua').innerHTML = " ketqua"+ ": " + F;
+    }
+
+</script>
+</body>
+</html>

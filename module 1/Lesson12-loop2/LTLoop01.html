@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+
+<!--<script>-->
+<!--  // Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100.-->
+<!--  // Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.-->
+<!--  // for (var i = 1; i < 101; i++) {-->
+<!--  //   if (i <  100){-->
+<!--  //     document.write( i + "<br>");-->
+<!--  //   }-->
+<!--  //   else {-->
+<!--  //     alert(" hoàn thành");-->
+<!--  //   }-->
+<!--  // }-->
+
+
+<!--//  bài 2 :-->
+<!--//   var a = prompt(" nhập nhiệt độ :")-->
+<!--// if (a > 100){-->
+<!--//   alert(" giảm nhiệt độ đi !!!")-->
+<!--// } else if (a < 20 ){-->
+<!--//   alert(" tăng lên đii!!!!!")-->
+<!--// }-->
+<!--</script>-->
+
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<!--<h1>Hiển thị 20 số trong dãy Fibonacci đầu tiên</h1>-->
+
+<!--    <button onclick="generateFibonacci()">Hiển thị dãy Fibonacci</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function generateFibonacci() {-->
+<!--            let fibonacci = [0, 1]; // Dãy Fibonacci bắt đầu với 0 và 1-->
+<!--            const count = 20; // Số lượng số trong dãy Fibonacci cần hiển thị-->
+
+<!--            // Tính toán các số Fibonacci tiếp theo-->
+<!--            for (let i = 2; i < count; i++) {-->
+<!--                fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);-->
+<!--            }-->
+
+<!--            // Hiển thị dãy Fibonacci-->
+<!--            document.getElementById("result").innerText = "20 số trong dãy Fibonacci đầu tiên: " + fibonacci.join(", ");-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+
+<!--    <h1>Tìm số Fibonacci đầu tiên chia hết cho 5</h1>-->
+
+<!--    <button onclick="findFibonacciDivisibleBy5()">Tìm số Fibonacci chia hết cho 5</button>-->
+
+<!--    <h2 id="result"></h2>-->
+
+<!--    <script>-->
+<!--        function findFibonacciDivisibleBy5() {-->
+<!--            let fibonacci = [0, 1]; // Dãy Fibonacci bắt đầu với 0 và 1-->
+<!--            let N = 2; // Bắt đầu tính từ số thứ 3-->
+<!--            let result = null;-->
+
+<!--            // Tìm số Fibonacci đầu tiên chia hết cho 5-->
+<!--            while (result === null) {-->
+<!--                // Tính số Fibonacci tiếp theo-->
+<!--                fibonacci.push(fibonacci[N - 1] + fibonacci[N - 2]);-->
+
+<!--                // Kiểm tra nếu số Fibonacci chia hết cho 5-->
+<!--                if (fibonacci[N] % 5 === 0) {-->
+<!--                    result = fibonacci[N];-->
+<!--                }-->
+
+<!--                N++; // Tăng chỉ số để tính số tiếp theo-->
+<!--            }-->
+
+<!--            // Hiển thị kết quả-->
+<!--            document.getElementById("result").innerText = "Số Fibonacci đầu tiên chia hết cho 5 là: " + result;-->
+<!--        }-->
+<!--    </script>-->
+
+<!--bài 7: -->
+<script>
+  for ( var a = 0 ; a <= 100 ; a++ ){
+    if ( a % 3 == 0 ){
+      document.write(a + " Fizz !!!!!! " + "<br>");
+    }
+    else if ( a % 5 == 0 ){
+       document.write(a + " Buzz !!!!!! " + "<br>");
+    }
+    else if ( a % 3 && a %5  == 0 ){
+       document.write(a + "Fizz Buzz !!!!!! " + "<br>");
+    }
+  }
+</script>
+
+</body>
+</html>

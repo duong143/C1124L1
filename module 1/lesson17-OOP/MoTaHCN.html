@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả HCN</title>
+
+
+  <style>
+    canvas { border: 1px solid black; }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  <p id="area"></p>
+  <p id="perimeter"></p>
+
+  <script>
+    class Rectangle {
+      constructor(length, width) {
+        this.length = length;
+        this.width = width;
+      }
+      area() { return this.length * this.width; }
+      perimeter() { return 2 * (this.length + this.width); }
+      draw() {
+        const ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.clearRect(0, 0, 400, 400);
+        ctx.fillRect(50, 50, this.length, this.width);
+      }
+    }
+
+    let rect = new Rectangle(200, 100);
+    rect.draw();
+    document.getElementById("area").textContent = "Area: " + rect.area();
+    document.getElementById("perimeter").textContent = "Perimeter: " + rect.perimeter();
+
+    setTimeout(() => {
+      rect.length = 150;
+      rect.width = 75;
+      rect.draw();
+      document.getElementById("area").textContent = "Area: " + rect.area();
+      document.getElementById("perimeter").textContent = "Perimeter: " + rect.perimeter();
+    }, 3000);
+  </script>
+</body>
+</html>

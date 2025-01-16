@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>Tên</td>
+        <td>Họ</td>
+        <td>tuổi</td>
+        <td>địa chỉ</td>
+    </tr>
+    <tr>
+        <td id="firstName"></td>
+        <td id="lastName"></td>
+        <td id="age"></td>
+        <td id="address"></td>
+    </tr>
+</table>
+<script>
+    // const personFirstName = 'John';
+    // const personLastName = 'Cena';
+    // const personAge = 18;
+    // const personAddress = "America";
+    // document.getElementById("firstName").innerHTML = personFirstName;
+    // document.getElementById("lastName").innerHTML = personLastName;
+    // document.getElementById("age").innerHTML = personAge;
+    // document.getElementById("address").innerHTML = personAddress;
+
+    //
+    // //
+    // const person1 = {
+    //     firstName: 'John',
+    //     lastName: 'Cena',
+    //     age: 18,
+    //     address: 'New York',
+    // }
+    //  document.getElementById("firstName").innerHTML = person1.firstName;
+    // document.getElementById("lastName").innerHTML = person1.lastName;
+    // document.getElementById("age").innerHTML = person1.age;
+    // document.getElementById("address").innerHTML = person1.address;
+
+// ví dụ thực hành class và object
+//     function student(id, name, address) {
+//         this.id = id;
+//         this.name = name;
+//         this.address = address;
+//         this.getInfor = function () {
+//             return "Id" + this.id + "Name=" + this.name + "Address " + this.address;
+//
+//         }
+//     }
+//     var student = new Student(1,"John","Ha Noi");
+//     console.log(student.getInfor());
+
+    var student = {
+        id: 1,
+        name: "John",
+        Address:"Ha Noi",
+        getInfor: function(){
+            return "Id"+this.id + "Name"+this.name+"Address"+this.address;
+        }
+    }
+    console.log(student.name);
+    console.log(student.getInfor());
+</script>
+</body>
+</html>
