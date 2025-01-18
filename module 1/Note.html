@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f4f9;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #notification{
+            margin-top: 10px;
+            font-size: 18px;
+            color: green;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        #notification.show{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý Ghi chú</h1>
+        <input id="noteInput" placeholder="Nhập ghi chú">
+        <button onclick="addNote()">Thêm</button>
+        <div id="notification">Đã thêm ghi chú thành công</div>
+        <ul id="noteList"></ul>
+    </div>
+
+    <script>
+        const notes = [];
+
+        function addNote() {
+            const input = document.getElementById('noteInput');
+            const notification = document.getElementById('notification');
+            if (input.value) {
+                notes.push(input.value);
+                input.value = '';
+                displayNotes();
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 1000);
+            }
+        }
+
+        function displayNotes() {
+            const noteList = document.getElementById('noteList');
+            noteList.innerHTML = '';
+            notes.forEach((note, index) => {
+                noteList.innerHTML += `<li>${note} <button onclick="deleteNote(${index})">Xóa</button></li>`;
+            });
+        }
+        function deleteNote(index) {
+            notes.splice(index, 1);
+            displayNotes();
+        }
+    </script>
+</body>
+</html>
