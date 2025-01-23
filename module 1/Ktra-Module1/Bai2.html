@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p>Nhập điểm : </p>
+<input type="number" id="scoreInput" min="0" max="100">
+<button onclick="roundScore()">Kiểm tra điểm</button>
+<p id="roundedScore"></p>
+<script>
+    function roundScore() {
+        const score = parseInt(document.getElementById("scoreInput").value);
+        if (score < 0 || score > 100) {
+            document.getElementById("roundedScore").textContent = "Hãy nhập lại, phải nhập từ 0-100";
+            return;
+        }
+        if (score < 50 || score < 48) {
+            document.getElementById("roundedScore").textContent = `Điểm của học sinh : ${score} -Thất học rồi`;
+            return;
+        }
+        const nextMultipleOfFive = Math.ceil(score / 5) * 5;
+        const difference = nextMultipleOfFive - score;
+        if (difference < 3) {
+            document.getElementById("roundedScore").textContent = `Điểm là : ${nextMultipleOfFive} - Bạn học giỏi đó`;
+        } else {
+            document.getElementById("roundedScore").textContent = `Điểm gốc: ${score}`;
+        }
+    }
+</script>
+</body>
+</html>
