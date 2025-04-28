@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài 2</title>
-    <style>
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    font-family: Arial, sans-serif;
-}
-
-.login-container {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #000;
-    width: 300px;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    border: 1px solid #000;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #ddd;
-}
-    </style>
+ <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      border: 1px solid black;
+      width: 400px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+    .container h2 {
+      margin-bottom: 20px;
+    }
+    .input-field {
+      width: 70%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .button-group button {
+      width: 100px;
+      margin: 5px;
+      padding: 8px;
+      border: none;
+      background-color: #1bea48;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .button-group button:hover {
+      background-color: #5e4040;
+    }
+  </style>
 </head>
 <body>
-<div class="login-container">
-        <h1>Login</h1>
-        <button class="btn">Login</button>
-        <button class="btn">Register</button>
+<div class="container">
+    <h2>Login</h2>
+    <input type="text" class="input-field">
+    <input type="password" class="input-field">
+    <div class="button-group">
+      <button>Login</button>
+      <button>Register</button>
     </div>
+  </div>
 </body>
 </html>
