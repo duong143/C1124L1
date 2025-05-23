@@ -120,13 +120,15 @@ function App() {
   // };
 
     // bài 17
-     const [selectedHobbies, setSelectedHobbies] = useState([]);
+  //    const [selectedHobbies, setSelectedHobbies] = useState([]);
+  //
+  // const hobbiesList = ['Đọc sách', 'Nghe nhạc', 'Chơi game', 'Nấu ăn'];
+  //
+  // const handleHobbiesChange = (list) => {
+  //   setSelectedHobbies(list);
+  // };
 
-  const hobbiesList = ['Đọc sách', 'Nghe nhạc', 'Chơi game', 'Nấu ăn'];
 
-  const handleHobbiesChange = (list) => {
-    setSelectedHobbies(list);
-  };
   return (
       // bài 1
     // <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -239,21 +241,21 @@ function App() {
     // </div>
 
       // bài 17
-      <div>
-        <h1>Chọn sở thích của bạn</h1>
-      <HobbiesSelector1 options={hobbiesList} onChange={handleHobbiesChange} />
-
-      <h2>Sở thích đã chọn:</h2>
-      {selectedHobbies.length > 0 ? (
-        <ul>
-          {selectedHobbies.map((hobby, idx) => (
-            <li key={idx}>{hobby}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>Chưa chọn sở thích nào</p>
-      )}
-    </div>
+    //   <div>
+    //     <h1>Chọn sở thích của bạn</h1>
+    //   <HobbiesSelector1 options={hobbiesList} onChange={handleHobbiesChange} />
+    //
+    //   <h2>Sở thích đã chọn:</h2>
+    //   {selectedHobbies.length > 0 ? (
+    //     <ul>
+    //       {selectedHobbies.map((hobby, idx) => (
+    //         <li key={idx}>{hobby}</li>
+    //       ))}
+    //     </ul>
+    //   ) : (
+    //     <p>Chưa chọn sở thích nào</p>
+    //   )}
+    // </div>
   );
 }
 
