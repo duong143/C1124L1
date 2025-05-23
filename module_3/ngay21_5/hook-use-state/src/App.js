@@ -14,6 +14,12 @@ import Login from "./BTTH/B5_Login/Login";
 import MenuBar from "./BTTH/B6_ChuyenTrangBangMenu/MenuBar";
 import RegisterPage from "./BTTH/B7_formDangKy/RegisterPage";
 import FeatureToggle from "./BTTH/B8_BatTatTinhNang/FeatureToggle";
+import Counter from "./BtapJames/Counter";
+import Selector from "./BtapJames/Selector";
+import MyClock from "./BtapJames/MyClock";
+import Timer from "./BtapJames/Timer";
+import Counter1 from "./BtapJames/Counter1";
+import Counter2 from "./BtapJames/Counter2";
 
 
 function App() {
@@ -68,15 +74,40 @@ function App() {
 
 
 
+  //Xây dựng component Car selection
+  // const carList = ['Toyota', 'Honda', 'Ford', 'BMW'];
+  // const colorList = ['Red', 'Blue', 'Black', 'White'];
+  //
+  // const [selectedCar, setSelectedCar] = useState({
+  //   car: carList[0],
+  //   color: colorList[0]
+  // });
+  //
+  // const handleCarChange = (e) => {
+  //   const newCar = e.target.value;
+  //   setSelectedCar(prevState => ({
+  //     ...prevState,
+  //     car: newCar
+  //   }));
+  // };
+  //
+  // const handleColorChange = (e) => {
+  //   const newColor = e.target.value;
+  //   setSelectedCar(prevState => ({
+  //     ...prevState,
+  //     color: newColor
+  //   }));
+  // };
+  //
 
 
 
 
   return (
-    // <Example1 />
-    //   <Example2 />
-    //   <NewLettersForm />
-    //   <Product />
+      // <Example1 />
+      //   <Example2 />
+      //   <NewLettersForm />
+      //   <Product />
 
       // bài 1
       // <div>
@@ -115,16 +146,73 @@ function App() {
 
 
       // bài 6
-    //   <div>
-    //   <h2>Chuyển trang bằng Menu</h2>
-    //   <MenuBar selected={selected} onSelect={setSelected} />
-    // </div>
+      //   <div>
+      //   <h2>Chuyển trang bằng Menu</h2>
+      //   <MenuBar selected={selected} onSelect={setSelected} />
+      // </div>
 
       // bài 7
       //   <RegisterPage/>
 
       // bài 8
-      <FeatureToggle/>
+      // <FeatureToggle/>
+
+
+      // Bài tập James
+      // bài Triển khai useState
+      // <Counter />
+
+      //Triển khai useEffect
+      // <Selector />
+
+      //Triển khai HookCustom
+      // <div className="Container">
+      //   <MyClock />
+      // </div>
+
+      //Xây dựng component Car selection
+    //     <div>
+    //   <h1>Choose your car and color</h1>
+    //
+    //   <div>
+    //     <label>Car: </label>
+    //     <select value={selectedCar.car} onChange={handleCarChange}>
+    //       {carList.map((car, index) => (
+    //         <option key={index} value={car}>
+    //           {car}
+    //         </option>
+    //       ))}
+    //     </select>
+    //   </div>
+    //
+    //   <div>
+    //     <label>Color: </label>
+    //     <select value={selectedCar.color} onChange={handleColorChange}>
+    //       {colorList.map((color, index) => (
+    //         <option key={index} value={color}>
+    //           {color}
+    //         </option>
+    //       ))}
+    //     </select>
+    //   </div>
+    //
+    //   <h2>
+    //     You selected a {selectedCar.color} – {selectedCar.car}
+    //   </h2>
+    // </div>
+
+      //Xây dựng Component Timer
+      //   <Timer />
+
+      //Xây dựng Component Counter
+      <div>
+        <Counter1 />
+        <Counter2 />
+
+      </div>
+
+
+
   );
 }
 
