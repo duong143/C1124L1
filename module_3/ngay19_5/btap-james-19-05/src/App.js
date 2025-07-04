@@ -13,7 +13,7 @@ import Home1 from "./BTAP_james/Home1";
 //       <header className="App-header">
 //         <img src={logo} className="App-logo" alt="logo" />
 //         <p>
-//           Edit <code>src/App.js</code> and save to reload.
+//           Edit <code></code> and save to reload.
 //         </p>
 //         <a
 //           className="App-link"
@@ -126,7 +126,7 @@ import Home1 from "./BTAP_james/Home1";
 //
 // export default App;
 
-// bài Kiểm tra User Login/Logout
+// bài Kiểm tra User Index/Logout
 // class App extends Component{
 //   constructor (props) {
 //     super(props);
@@ -212,7 +212,7 @@ import Home1 from "./BTAP_james/Home1";
 // export default App;
 
 
-//Xử lý sự kiện Login/Logout với form đăng nhập bằng Bootstrap
+//Xử lý sự kiện Index/Logout với form đăng nhập bằng Bootstrap
 // class App extends Component {
 //   constructor(props) {
 //     super(props);

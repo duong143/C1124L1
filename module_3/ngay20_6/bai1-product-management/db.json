@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S23",
+      "price": 899,
+      "description": "Điện thoại cao cấp từ Samsung",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "ebfa",
+      "name": "gà rán",
+      "price": "1",
+      "description": "",
+      "imageUrl": "https://www.bing.com/images/search?q=%E1%BA%A3nh&FORM=IQFRBA&id=898CAD7AB73341E17832FAF9819E3C9028C680C1"
+    },
+    {
+      "id": "0185",
+      "name": "ádasdas",
+      "price": "1",
+      "description": "",
+      "imageUrl": "https://www.bing.com/images/search?q=%E1%BA%A3nh&FORM=IQFRBA&id=898CAD7AB73341E17832FAF9819E3C9028C680C1"
+    }
+  ]
+}

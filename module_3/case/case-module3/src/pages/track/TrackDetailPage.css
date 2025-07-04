@@ -1,0 +1,73 @@
+.track-page-parent {
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.track-page-header {
+    display: flex;
+    align-items: center;
+}
+
+.track-page-back {
+    background: none;
+    border: 1px solid #444;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.track-page-back:hover {
+    background-color: #1db954;
+    color: #000;
+}
+
+.track-page-content {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.track-page-cover {
+    width: 240px;
+    height: 240px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.track-page-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.track-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1db954;
+}
+
+.track-page-controls {
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+    color: #ccc;
+}
+
+.track-page-loading, .track-page-error {
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}

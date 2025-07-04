@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "tranducduong2k4@gmail.com",
+      "password": "123456",
+      "fullName": "Trần Đức Dương",
+      "phone": "0987654321"
+    },
+    {
+      "id": 2,
+      "email": "admin",
+      "password": "123",
+      "fullName": "Trần Đức Dương",
+      "phone": "0987654321"
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "title": "Hãy trao cho anh",
+      "artist": "Sơn Tùng MTP",
+      "album": "Hãy trao cho anh",
+      "cover": "song1.jpg",
+      "audioUrl": "assets/audio1.mp3"
+    },
+    {
+      "id": 2,
+      "title": "Chạy ngay đi",
+      "artist": "Sơn Tùng MTP",
+      "album": "Chạy ngay đi",
+      "cover": "song2.jpg",
+      "audioUrl": "assets/audio2.mp3"
+    },
+    {
+      "id": 3,
+      "title": "Càng Cua",
+      "artist": "Low G",
+      "album": "Càng Cua",
+      "cover": "lowg1.jpg",
+      "audioUrl": "assets/lowg1.mp3"
+    },
+    {
+      "id": 4,
+      "title": "Simp gái 808",
+      "artist": "Low G",
+      "album": "Simp gái 808",
+      "cover": "lowg2.jpg",
+      "audioUrl": "assets/lowg2.mp3"
+    },
+    {
+      "id": 5,
+      "title": "Chìm Sâu",
+      "artist": "MCK ft. Trung Trần",
+      "album": "Chìm Sâu",
+      "cover": "mck1.jpg",
+      "audioUrl": "assets/mck1.mp3"
+    },
+    {
+      "id": 6,
+      "title": "Tình Đắng Như Ly Cà Phê",
+      "artist": "MCK",
+      "album": "Tình Đắng",
+      "cover": "mck2.jpg",
+      "audioUrl": "assets/mck2.mp3"
+    },
+    {
+      "id": 7,
+      "title": "Show Me Love",
+      "artist": "MCK",
+      "album": "99%",
+      "cover": "mck3.jpg",
+      "audioUrl": "assets/mck3.mp3"
+    },
+    {
+      "id": 8,
+      "title": "Đánh đổi",
+      "artist": "Obito ft. MCK",
+      "album": "Đánh đổi",
+      "cover": "obito1.jpg",
+      "audioUrl": "assets/obito1.mp3"
+    },
+    {
+      "id": 9,
+      "title": "Đầu đường xó chợ",
+      "artist": "Obito",
+      "album": "Đánh đổi",
+      "cover": "obito2.jpg",
+      "audioUrl": "assets/obito2.mp3"
+    },
+    {
+      "id": 10,
+      "title": "Tháng Tư Là Lời Nói Dối Của Em",
+      "artist": "Hà Anh Tuấn",
+      "album": "Lifelines",
+      "cover": "haanhtuan1.jpg",
+      "audioUrl": "assets/haanhtuan1.mp3"
+    },
+    {
+      "id": 11,
+      "title": "Xuân Thì",
+      "artist": "Hà Anh Tuấn",
+      "album": "See Sing Share",
+      "cover": "haanhtuan2.jpg",
+      "audioUrl": "assets/haanhtuan2.mp3"
+    },
+    {
+      "id": 12,
+      "title": "Ngủ Một Mình",
+      "artist": "HIEUTHUHAI",
+      "album": "Ngủ Một Mình",
+      "cover": "hieuthu2.jpg",
+      "audioUrl": "assets/hieuthu2.mp3"
+    },
+    {
+      "id": 13,
+      "title": "Anh Đã Ổn Hơn",
+      "artist": "RPT MCK",
+      "album": "99%",
+      "cover": "mck4.jpg",
+      "audioUrl": "assets/mck4.mp3"
+    },
+    {
+      "id": 14,
+      "title": "nếu lúc đó",
+      "artist": "Tlinh",
+      "album": "Tlinh Mixtape",
+      "cover": "tlinh1.jpg",
+      "audioUrl": "assets/tlinh1.mp3"
+    },
+    {
+      "id": 15,
+      "title": "Không Thể Say",
+      "artist": "HIEUTHUHAI",
+      "album": "Gác Lại Âu Lo",
+      "cover": "hieuthu3.jpg",
+      "audioUrl": "assets/hieuthu3.mp3"
+    },
+    {
+      "id": 16,
+      "title": "Chưa Quên Người Yêu Cũ",
+      "artist": "Hà Nhi",
+      "album": "Single",
+      "cover": "hani1.jpg",
+      "audioUrl": "assets/hani1.mp3"
+    },
+    {
+      "id": 17,
+      "title": "Yêu Đừng Sợ Đau",
+      "artist": "Ngô Lan Hương",
+      "album": "Ballad 2024",
+      "cover": "ngolanh1.jpg",
+      "audioUrl": "assets/ngolanh1.mp3"
+    }
+  ]
+}

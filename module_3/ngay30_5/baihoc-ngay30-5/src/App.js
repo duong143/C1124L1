@@ -266,7 +266,7 @@
 //   );
 // }
 
-// Validate Form Login
+// Validate Form Index
 // import React, { useState } from "react";
 // import "./App.css";
 //
@@ -299,14 +299,14 @@
 //     const isError = isFilled && (form.email.error || form.password.error);
 //     alert(
 //       isFilled && !isError
-//         ? "Login in successfully!!!"
+//         ? "Index in successfully!!!"
 //         : "Please fill out all the fields!!!"
 //     );
 //   }
 //
 //   return (
 //     <div>
-//       <h1>Login</h1>
+//       <h1>Index</h1>
 //       <form>
 //         <div
 //           className={`custom-input ${form.email &&
@@ -348,7 +348,7 @@
 // }
 
 
-//Validate Form Login with Formik
+//Validate Form Index with Formik
 // import React, { useState } from "react";
 // import { Formik } from "formik";
 // import "./App.css";
@@ -382,7 +382,7 @@
 //   }
 //
 //   function handleSubmit() {
-//     alert("Login in successfully!!!");
+//     alert("Index in successfully!!!");
 //   }
 //
 //   return (
